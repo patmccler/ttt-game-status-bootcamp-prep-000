@@ -16,21 +16,13 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-winning_con = false
 
-  WIN_COMBINATIONS.each do |win_con|
-
-    #checks to make sure any of spaces included in winning 3 are not empty
-    hasEmptySpace = win_con.any? do |this_win_con|
-      current_space = board[this_win_con]
-      current_space == "" || current_space == " " || current_space == nil
-    end
-
-    if (board[win_con[0]] == board[win_con[1]] && board[win_con[1]] == board[win_con[2]]) && !hasEmptySpace
-      winning_con = win_con
-    end
-    break if winning_con
+  WIN_COMBINATIONS.detect do |win_con|
+    board[win_con[0]] == board[win_con[1]] && board[win_con[1]] == board[win_con[2]]) && position_taken?[board, win_con[0]]
   end
-
-  winning_con
 end
+
+def full?(board)
+
+end
+
