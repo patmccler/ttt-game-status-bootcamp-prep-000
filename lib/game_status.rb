@@ -14,3 +14,14 @@ WIN_COMBINATIONS = [
   [0,4,8], #top left to bot right diagonal
   [2,4,6]  #top right to bot left diagonal
 ]
+
+def won?(board)
+winning_con = false
+  
+  WIN_COMBINATIONS.each do |win_con|
+    if board[win_con[0]] == board[win_con[1]] == board[win_con[2]]
+      winning_con = win_con
+  end
+
+  winning_con
+end
