@@ -24,7 +24,7 @@ winning_con = false
     end
 
 
-    break if winning_con && !(win_con[0] == "" || win_con[0] == " " || win_con[0] == nil)
+    break if winning_con && !(board[win_con[0]] == "" || board[win_con[0]] == " " || board[win_con[0]] == nil)
 
 
   end
