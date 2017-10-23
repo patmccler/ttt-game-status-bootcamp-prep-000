@@ -37,7 +37,7 @@ def over?(board)
 
 end
 
-winner(board)
+def winner(board)
   board[won?(board)[0]]
 
 
