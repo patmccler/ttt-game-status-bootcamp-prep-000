@@ -19,10 +19,23 @@ def won?(board)
 winning_con = false
 
   WIN_COMBINATIONS.each do |win_con|
-    if ((board[win_con[0]] == board[win_con[1]] && board[win_con[1]] == board[win_con[2]]) && (win_con[0] != "" || win_con[0] != nil || win_con[0] != " "))
-      winning_con = win_con
+    if win_con.all? {|win_con_index| board[win_con_index] == board[win_con[0]]}
+        unless win_con[0] == "" || win_con[0] == " " || win_con[0] == nil
+          winning_con = win_con
+          break
+        end
+
+  
     end
+
+
   end
+
+
+    
+#    if ((board[win_con[0]] == board[win_con[1]] && board[win_con[1]] == board[win_con[2]]) && (win_con[0] != "" || win_con[0] != nil || win_con[0] != " "))
+#      winning_con = win_con
+##  end
 
   winning_con
 end
