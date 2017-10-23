@@ -22,7 +22,7 @@ winning_con = false
 
     #checks to make sure any of spaces included in winning 3 are not empty
     hasEmptySpace = win_con.any? do |this_win_con|
-      board[this_win_con] = current_space
+      current_space = board[this_win_con]
       current_space == "" || current_space == " " || current_space == nil
     end
 
