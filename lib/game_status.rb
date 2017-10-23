@@ -24,9 +24,8 @@ winning_con = false
     end
 
 
-    if(winning_con && !(win_con[0] == "" || win_con[0] == " " || win_con[0] == nil))
-      break
-    end
+    break if winning_con && !(win_con[0] == "" || win_con[0] == " " || win_con[0] == nil)
+
 
   end
 
