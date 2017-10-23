@@ -27,3 +27,8 @@ def full?(board)
     pos == " " || pos.nil?
   end
 end
+
+def draw?(board)
+  full?(board) && !won?(board)
+  
+end
