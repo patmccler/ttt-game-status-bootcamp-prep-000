@@ -23,7 +23,7 @@ winning_con = false
         winning_con = win_con
     end
 
-
+    puts [board[win_con[0]]]
     break if winning_con && !(board[win_con[0]] == "" || board[win_con[0]] == " " || board[win_con[0]] == nil)
 
 
